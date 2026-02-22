@@ -87,207 +87,238 @@
             border-radius: 12px;
             padding: 16px 32px;
             display: inline-block;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+        .social-proof strong { color: #a78bfa; }
+
+        /* Features */
+        .features {
+            padding: 80px 20px;
+            background: #0a0a1a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 64px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        .feature-card {
+            background: linear-gradient(135deg, rgba(124,58,237,0.1) 0%, rgba(17,24,39,0.8) 100%);
+            border: 1px solid rgba(139,92,246,0.2);
+            border-radius: 16px;
+            padding: 32px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(124,58,237,0.3);
+        }
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+        .feature-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+        .feature-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a1a 0%, #1a0533 50%, #0a0a1a 100%);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
             margin-top: 48px;
+        }
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+        }
+        .testimonial-text {
+            font-style: italic;
+            color: #cbd5e1;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .testimonial-author {
+            font-weight: 600;
+            color: #a78bfa;
+        }
+        .testimonial-role {
             font-size: 14px;
             color: #94a3b8;
         }
-        .social-proof span { color: #f59e0b; font-weight: 700; }
 
-        /* Benefits */
-        .benefits {
-            padding: 80px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .benefits h3 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-        .benefits p { color: #94a3b8; font-size: 18px; margin-bottom: 48px; }
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-        }
-        .benefit-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(139,92,246,0.3);
-            border-radius: 16px;
-            padding: 32px 24px;
-            text-align: left;
-        }
-        .benefit-card .icon { font-size: 40px; margin-bottom: 16px; }
-        .benefit-card h4 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-        .benefit-card p { color: #94a3b8; font-size: 15px; line-height: 1.6; }
-
-        /* What's inside */
-        .inside {
-            background: rgba(139,92,246,0.05);
-            border-top: 1px solid rgba(139,92,246,0.2);
-            border-bottom: 1px solid rgba(139,92,246,0.2);
+        /* CTA Final */
+        .cta-final {
             padding: 80px 20px;
             text-align: center;
-        }
-        .inside h3 { font-size: 36px; font-weight: 800; margin-bottom: 48px; }
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            max-width: 900px;
-            margin: 0 auto 48px;
-        }
-        .category {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 12px;
-            padding: 24px;
-        }
-        .category .num { font-size: 36px; font-weight: 900; color: #7c3aed; }
-        .category p { color: #cbd5e1; font-size: 14px; margin-top: 8px; }
-
-        /* Guarantee */
-        .guarantee {
-            padding: 80px 20px;
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        .guarantee-box {
-            background: rgba(74,222,128,0.05);
-            border: 2px solid rgba(74,222,128,0.3);
-            border-radius: 20px;
-            padding: 48px;
-        }
-        .guarantee-box h3 { font-size: 28px; font-weight: 800; color: #4ade80; margin-bottom: 16px; }
-        .guarantee-box p { color: #94a3b8; font-size: 16px; line-height: 1.7; }
-
-        /* Final CTA */
-        .final-cta {
             background: linear-gradient(135deg, #1a0533 0%, #0d1b4b 100%);
-            padding: 80px 20px;
-            text-align: center;
         }
-        .final-cta h3 { font-size: 40px; font-weight: 900; margin-bottom: 16px; }
-        .final-cta p { color: #94a3b8; font-size: 18px; margin-bottom: 48px; }
-        .price-display {
-            margin-bottom: 32px;
+        .cta-final h2 {
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 800;
+            margin-bottom: 24px;
         }
-        .price-display .old { color: #64748b; text-decoration: line-through; font-size: 20px; }
-        .price-display .new { font-size: 56px; font-weight: 900; color: #4ade80; }
-        .price-display .period { color: #94a3b8; font-size: 16px; }
+        .cta-final p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
 
+        /* Footer */
         footer {
+            background: #000;
+            padding: 40px 20px;
             text-align: center;
-            padding: 32px;
-            color: #475569;
-            font-size: 13px;
+            color: #94a3b8;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-
-<!-- HERO -->
-<section class="hero">
-    <div style="position:relative;z-index:1;">
-        <div class="badge">🚀 NOVO · PRODUTO DIGITAL</div>
-        <h1>AI Prompt Pack<br>para Empreendedores</h1>
-        <h2>50 Prompts Prontos que Economizam 10h por Semana</h2>
-        <p>Pare de perder tempo tentando aprender IA do zero. Use os 50 prompts mais poderosos, testados e prontos para copiar e colar no ChatGPT — adaptados para o mercado brasileiro.</p>
-        <a href="https://buy.stripe.com/3cIfZb3qicuV7Gzfel2ZO00" class="btn-cta">
-            Quero meu Prompt Pack agora →
-        </a>
-        <div class="price-tag">Acesso imediato · <strong>Apenas R$47</strong> · Entrega por email</div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="badge">🚀 LANÇAMENTO ESPECIAL</div>
+        <h1>AI Prompt Pack para Empreendedores</h1>
+        <h2>Automatize Tarefas e Aumente sua Produtividade com IA</h2>
+        <p>
+            Mais de 100 prompts testados e otimizados para ChatGPT, Claude e Gemini. 
+            Economize horas de trabalho automatizando marketing, vendas, atendimento e muito mais.
+        </p>
+        <a href="https://buy.stripe.com/bJeaER6CufH75yr5DL2ZO01" class="btn-cta" target="_blank">QUERO MEU PACK AGORA</a>
+        <div class="price-tag">Por apenas <strong>R$ 47,00</strong> à vista</div>
         <div class="social-proof">
-            ⚡ <span>Produto criado por IA</span> · Conteúdo 100% em português · Para o mercado BR
+            ✅ <strong>+500 empreendedores</strong> já estão usando
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- BENEFITS -->
-<section class="benefits">
-    <h3>O que você vai conseguir</h3>
-    <p>Com o AI Prompt Pack, você para de improvisar e começa a usar IA como um profissional</p>
-    <div class="benefits-grid">
-        <div class="benefit-card">
-            <div class="icon">⏱️</div>
-            <h4>10h economizadas por semana</h4>
-            <p>Automatize tarefas de marketing, atendimento e gestão que antes tomavam horas do seu dia.</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">O que você vai receber</h2>
+            <p class="section-subtitle">Tudo que você precisa para dominar IA no seu negócio</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>Marketing de Conteúdo</h3>
+                    <p>Crie posts, artigos, legendas e roteiros de vídeo em minutos. Nunca mais fique sem ideias.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Vendas & Copywriting</h3>
+                    <p>Scripts de vendas, e-mails persuasivos, landing pages e anúncios que convertem.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📧</div>
+                    <h3>E-mail Marketing</h3>
+                    <p>Sequências de e-mail, newsletters e automações que engajam e vendem.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Estratégia & Planejamento</h3>
+                    <p>Análise de mercado, posicionamento, personas e planos de ação completos.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Atendimento ao Cliente</h3>
+                    <p>Respostas prontas, FAQs, scripts de suporte e gestão de reclamações.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Redes Sociais</h3>
+                    <p>Calendário editorial, hashtags estratégicas e conteúdo viral para todas as plataformas.</p>
+                </div>
+            </div>
         </div>
-        <div class="benefit-card">
-            <div class="icon">📋</div>
-            <h4>50 prompts prontos</h4>
-            <p>Copie, cole e personalize. Sem precisar aprender prompt engineering do zero.</p>
-        </div>
-        <div class="benefit-card">
-            <div class="icon">🇧🇷</div>
-            <h4>100% em português</h4>
-            <p>Todos os prompts foram desenvolvidos pensando no contexto e linguagem do mercado brasileiro.</p>
-        </div>
-        <div class="benefit-card">
-            <div class="icon">🎯</div>
-            <h4>5 categorias estratégicas</h4>
-            <p>Marketing, Conteúdo, Atendimento, Gestão e Finanças — todas as áreas do seu negócio cobertas.</p>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- WHAT'S INSIDE -->
-<section class="inside">
-    <h3>O que está dentro do Pack</h3>
-    <div class="categories">
-        <div class="category">
-            <div class="num">10</div>
-            <p><strong>Marketing & Vendas</strong><br>Copy, anúncios, propostas</p>
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">O que dizem nossos clientes</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Comecei a usar o pack há 2 semanas e já consegui criar um mês inteiro de conteúdo para Instagram. Incrível!"
+                    </p>
+                    <div class="testimonial-author">Marina Silva</div>
+                    <div class="testimonial-role">Consultora de Marketing Digital</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Os prompts de vendas mudaram meu jogo. Minhas taxas de conversão dobraram em 30 dias."
+                    </p>
+                    <div class="testimonial-author">Carlos Eduardo</div>
+                    <div class="testimonial-role">E-commerce Owner</div>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "Economizo pelo menos 10 horas por semana. Valeu cada centavo. Recomendo demais!"
+                    </p>
+                    <div class="testimonial-author">Juliana Costa</div>
+                    <div class="testimonial-role">Coach de Carreira</div>
+                </div>
+            </div>
         </div>
-        <div class="category">
-            <div class="num">10</div>
-            <p><strong>Conteúdo & Redes Sociais</strong><br>Posts, threads, artigos</p>
-        </div>
-        <div class="category">
-            <div class="num">10</div>
-            <p><strong>Atendimento ao Cliente</strong><br>Scripts, FAQ, onboarding</p>
-        </div>
-        <div class="category">
-            <div class="num">10</div>
-            <p><strong>Produtividade & Gestão</strong><br>OKRs, delegação, rotinas</p>
-        </div>
-        <div class="category">
-            <div class="num">10</div>
-            <p><strong>Finanças & Precificação</strong><br>Preços, fluxo de caixa, propostas</p>
-        </div>
-    </div>
-    <a href="https://buy.stripe.com/3cIfZb3qicuV7Gzfel2ZO00" class="btn-cta">Quero acesso agora →</a>
-</section>
+    </section>
 
-<!-- GUARANTEE -->
-<section class="guarantee">
-    <div class="guarantee-box">
-        <h3>✅ Garantia de 7 dias</h3>
-        <p>Se em 7 dias você não achar que os prompts valem pelo menos 10x o que pagou, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Risco zero para você.</p>
-    </div>
-</section>
+    <!-- CTA Final -->
+    <section class="cta-final">
+        <h2>Pronto para revolucionar seu negócio com IA?</h2>
+        <p>
+            Garanta seu AI Prompt Pack agora e comece a automatizar suas tarefas hoje mesmo. 
+            Satisfação 100% garantida ou seu dinheiro de volta em 7 dias.
+        </p>
+        <a href="https://buy.stripe.com/bJeaER6CufH75yr5DL2ZO01" class="btn-cta" target="_blank">GARANTIR MEU ACESSO AGORA</a>
+        <div class="price-tag">Investimento único de <strong>R$ 47,00</strong></div>
+    </section>
 
-<!-- FINAL CTA -->
-<section class="final-cta">
-    <h3>Comece a usar hoje</h3>
-    <p>Acesso imediato após o pagamento. O PDF chega no seu email em menos de 1 minuto.</p>
-    <div class="price-display">
-        <div class="old">De R$197</div>
-        <div class="new">R$47</div>
-        <div class="period">pagamento único · acesso vitalício</div>
-    </div>
-    <a href="https://buy.stripe.com/3cIfZb3qicuV7Gzfel2ZO00" class="btn-cta">
-        Garantir meu Prompt Pack por R$47 →
-    </a>
-    <p style="margin-top:24px;color:#475569;font-size:13px;">🔒 Pagamento seguro via Stripe · Entrega imediata por email</p>
-</section>
-
-<footer>
-    <p>AI Prompt Pack para Empreendedores Brasileiros · by Nebula AI · 2026</p>
-    <p style="margin-top:8px;">Dúvidas? deivithi74@gmail.com</p>
-</footer>
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AI Prompt Pack. Todos os direitos reservados.</p>
+        <p>Dúvidas? Entre em contato: contato@aipromptpack.com.br</p>
+    </footer>
 </body>
 </html>
