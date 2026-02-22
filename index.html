@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Pack para Empreendedores Brasileiros</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; background: #0a0a1a; color: #fff; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1a0533 0%, #0d1b4b 50%, #0a0a1a 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 60%);
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000;
+            font-weight: 700;
+            font-size: 14px;
+            padding: 6px 20px;
+            border-radius: 50px;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 64px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero h2 {
+            font-size: clamp(18px, 2.5vw, 28px);
+            color: #a78bfa;
+            font-weight: 400;
+            margin-bottom: 32px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        /* CTA Button */
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #4f46e5);
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            padding: 20px 48px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 32px rgba(124,58,237,0.4);
+        }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(124,58,237,0.6); }
+        .price-tag {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 16px;
+        }
+        .price-tag strong { color: #4ade80; font-size: 18px; }
+
+        /* Social proof */
+        .social-proof {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px 32px;
+            display: inline-block;
+            margin-top: 48px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        .social-proof span { color: #f59e0b; font-weight: 700; }
+
+        /* Benefits */
+        .benefits {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .benefits h3 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .benefits p { color: #94a3b8; font-size: 18px; margin-bottom: 48px; }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .benefit-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(139,92,246,0.3);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: left;
+        }
+        .benefit-card .icon { font-size: 40px; margin-bottom: 16px; }
+        .benefit-card h4 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+        .benefit-card p { color: #94a3b8; font-size: 15px; line-height: 1.6; }
+
+        /* What's inside */
+        .inside {
+            background: rgba(139,92,246,0.05);
+            border-top: 1px solid rgba(139,92,246,0.2);
+            border-bottom: 1px solid rgba(139,92,246,0.2);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .inside h3 { font-size: 36px; font-weight: 800; margin-bottom: 48px; }
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            max-width: 900px;
+            margin: 0 auto 48px;
+        }
+        .category {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .category .num { font-size: 36px; font-weight: 900; color: #7c3aed; }
+        .category p { color: #cbd5e1; font-size: 14px; margin-top: 8px; }
+
+        /* Guarantee */
+        .guarantee {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .guarantee-box {
+            background: rgba(74,222,128,0.05);
+            border: 2px solid rgba(74,222,128,0.3);
+            border-radius: 20px;
+            padding: 48px;
+        }
+        .guarantee-box h3 { font-size: 28px; font-weight: 800; color: #4ade80; margin-bottom: 16px; }
+        .guarantee-box p { color: #94a3b8; font-size: 16px; line-height: 1.7; }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #1a0533 0%, #0d1b4b 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .final-cta h3 { font-size: 40px; font-weight: 900; margin-bottom: 16px; }
+        .final-cta p { color: #94a3b8; font-size: 18px; margin-bottom: 48px; }
+        .price-display {
+            margin-bottom: 32px;
+        }
+        .price-display .old { color: #64748b; text-decoration: line-through; font-size: 20px; }
+        .price-display .new { font-size: 56px; font-weight: 900; color: #4ade80; }
+        .price-display .period { color: #94a3b8; font-size: 16px; }
+
+        footer {
+            text-align: center;
+            padding: 32px;
+            color: #475569;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div style="position:relative;z-index:1;">
+        <div class="badge">🚀 NOVO · PRODUTO DIGITAL</div>
+        <h1>AI Prompt Pack<br>para Empreendedores</h1>
+        <h2>50 Prompts Prontos que Economizam 10h por Semana</h2>
+        <p>Pare de perder tempo tentando aprender IA do zero. Use os 50 prompts mais poderosos, testados e prontos para copiar e colar no ChatGPT — adaptados para o mercado brasileiro.</p>
+        <a href="https://buy.stripe.com/3cIfZb3qicuV7Gzfel2ZO00" class="btn-cta">
+            Quero meu Prompt Pack agora →
+        </a>
+        <div class="price-tag">Acesso imediato · <strong>Apenas R$47</strong> · Entrega por email</div>
+        <div class="social-proof">
+            ⚡ <span>Produto criado por IA</span> · Conteúdo 100% em português · Para o mercado BR
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+    <h3>O que você vai conseguir</h3>
+    <p>Com o AI Prompt Pack, você para de improvisar e começa a usar IA como um profissional</p>
+    <div class="benefits-grid">
+        <div class="benefit-card">
+            <div class="icon">⏱️</div>
+            <h4>10h economizadas por semana</h4>
+            <p>Automatize tarefas de marketing, atendimento e gestão que antes tomavam horas do seu dia.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">📋</div>
+            <h4>50 prompts prontos</h4>
+            <p>Copie, cole e personalize. Sem precisar aprender prompt engineering do zero.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">🇧🇷</div>
+            <h4>100% em português</h4>
+            <p>Todos os prompts foram desenvolvidos pensando no contexto e linguagem do mercado brasileiro.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">🎯</div>
+            <h4>5 categorias estratégicas</h4>
+            <p>Marketing, Conteúdo, Atendimento, Gestão e Finanças — todas as áreas do seu negócio cobertas.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="inside">
+    <h3>O que está dentro do Pack</h3>
+    <div class="categories">
+        <div class="category">
+            <div class="num">10</div>
+            <p><strong>Marketing & Vendas</strong><br>Copy, anúncios, propostas</p>
+        </div>
+        <div class="category">
+            <div class="num">10</div>
+            <p><strong>Conteúdo & Redes Sociais</strong><br>Posts, threads, artigos</p>
+        </div>
+        <div class="category">
+            <div class="num">10</div>
+            <p><strong>Atendimento ao Cliente</strong><br>Scripts, FAQ, onboarding</p>
+        </div>
+        <div class="category">
+            <div class="num">10</div>
+            <p><strong>Produtividade & Gestão</strong><br>OKRs, delegação, rotinas</p>
+        </div>
+        <div class="category">
+            <div class="num">10</div>
+            <p><strong>Finanças & Precificação</strong><br>Preços, fluxo de caixa, propostas</p>
+        </div>
+    </div>
+    <a href="https://buy.stripe.com/3cIfZb3qicuV7Gzfel2ZO00" class="btn-cta">Quero acesso agora →</a>
+</section>
+
+<!-- GUARANTEE -->
+<section class="guarantee">
+    <div class="guarantee-box">
+        <h3>✅ Garantia de 7 dias</h3>
+        <p>Se em 7 dias você não achar que os prompts valem pelo menos 10x o que pagou, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Risco zero para você.</p>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <h3>Comece a usar hoje</h3>
+    <p>Acesso imediato após o pagamento. O PDF chega no seu email em menos de 1 minuto.</p>
+    <div class="price-display">
+        <div class="old">De R$197</div>
+        <div class="new">R$47</div>
+        <div class="period">pagamento único · acesso vitalício</div>
+    </div>
+    <a href="https://buy.stripe.com/3cIfZb3qicuV7Gzfel2ZO00" class="btn-cta">
+        Garantir meu Prompt Pack por R$47 →
+    </a>
+    <p style="margin-top:24px;color:#475569;font-size:13px;">🔒 Pagamento seguro via Stripe · Entrega imediata por email</p>
+</section>
+
+<footer>
+    <p>AI Prompt Pack para Empreendedores Brasileiros · by Nebula AI · 2026</p>
+    <p style="margin-top:8px;">Dúvidas? deivithi74@gmail.com</p>
+</footer>
+
+</body>
+</html>
