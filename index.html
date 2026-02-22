@@ -148,6 +148,89 @@
             line-height: 1.6;
         }
 
+        /* Frameworks */
+        .frameworks {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a1a 0%, #0d1b2e 100%);
+        }
+        .frameworks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+        .framework-card {
+            background: linear-gradient(135deg, rgba(0,217,255,0.08) 0%, rgba(17,24,39,0.9) 100%);
+            border: 1px solid rgba(0,217,255,0.25);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .framework-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(0,217,255,0.2);
+        }
+        .framework-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #00D9FF, #1B4D89);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 14px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+            letter-spacing: 1px;
+        }
+        .framework-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .framework-card p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* References */
+        .references {
+            padding: 60px 20px;
+            background: #050510;
+            text-align: center;
+        }
+        .references-label {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        .references-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .ref-badge {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #cbd5e1;
+            transition: border-color 0.3s;
+        }
+        .ref-badge span {
+            display: block;
+            font-size: 11px;
+            font-weight: 400;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        .ref-badge:hover { border-color: rgba(0,217,255,0.4); color: #fff; }
+
         /* Testimonials */
         .testimonials {
             padding: 80px 20px;
@@ -266,6 +349,77 @@
                     <div class="feature-icon">📱</div>
                     <h3>Redes Sociais</h3>
                     <p>Calendário editorial, hashtags estratégicas e conteúdo viral para todas as plataformas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frameworks Section -->
+    <section class="frameworks">
+        <div class="container">
+            <h2 class="section-title">Prompts Construídos com Ciência</h2>
+            <p class="section-subtitle">Cada prompt segue metodologias validadas pelas maiores referências mundiais em IA</p>
+
+            <div class="frameworks-grid">
+                <div class="framework-card">
+                    <div class="framework-tag">CO-STAR</div>
+                    <h3>Framework Explícito</h3>
+                    <p>Context, Objective, Style, Tone, Audience, Response — estrutura que garante outputs precisos e consistentes em qualquer modelo.</p>
+                </div>
+
+                <div class="framework-card">
+                    <div class="framework-tag">RISEN</div>
+                    <h3>Engenharia de Papel</h3>
+                    <p>Role, Instructions, Steps, End Goal, Narrowing — define o comportamento da IA com precisão cirúrgica para tarefas complexas.</p>
+                </div>
+
+                <div class="framework-card">
+                    <div class="framework-tag">FEW-SHOT</div>
+                    <h3>2-3 Exemplos Concretos</h3>
+                    <p>Cada prompt inclui exemplos reais de input/output para que a IA aprenda o padrão exato que você precisa — sem achismo.</p>
+                </div>
+
+                <div class="framework-card">
+                    <div class="framework-tag">JSON SCHEMA</div>
+                    <h3>Output Estruturado</h3>
+                    <p>Respostas em formato estruturado e previsível. Integre direto nos seus sistemas, planilhas e automações sem retrabalho.</p>
+                </div>
+
+                <div class="framework-card">
+                    <div class="framework-tag">CHAIN-OF-THOUGHT</div>
+                    <h3>Raciocínio em Cadeia</h3>
+                    <p>Para tarefas complexas, a IA pensa passo a passo antes de responder — eliminando erros e aumentando a qualidade do resultado.</p>
+                </div>
+
+                <div class="framework-card">
+                    <div class="framework-tag">SELF-CHECK</div>
+                    <h3>Avaliador Integrado</h3>
+                    <p>Built-in evaluator + "If unsure, say so" — a IA verifica a própria resposta e sinaliza incertezas antes de você usar o output.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section class="references">
+        <div class="container">
+            <p class="references-label">Baseado nas pesquisas de</p>
+            <div class="references-grid">
+                <div class="ref-badge">
+                    Anthropic
+                    <span>Claude &amp; Constitutional AI</span>
+                </div>
+                <div class="ref-badge">
+                    Ethan Mollick
+                    <span>Wharton School — Top AI Researcher</span>
+                </div>
+                <div class="ref-badge">
+                    OpenAI
+                    <span>GPT &amp; Prompt Engineering Guide</span>
+                </div>
+                <div class="ref-badge">
+                    Andrew Ng
+                    <span>DeepLearning.AI</span>
                 </div>
             </div>
         </div>
